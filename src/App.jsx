@@ -1,12 +1,14 @@
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import WeatherDisplay from './components/weatherDisplay/WeatherDisplay'
 import Form from './components/form/Form'
-import React, { useEffect } from 'react'
 
 export default function App() {
-    const fetchData = async () => {
+    const [weatherData, setWeatherData] = useState(null);
+
+    const fetchData = async (searchTerm) => {
     const apiKey = import.meta.env.VITE_API_KEY;
-    const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13';
+    const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${searchTerm}`;
     const options = {
       method: 'GET',
       headers: {
@@ -17,21 +19,27 @@ export default function App() {
 
     try {
       const response = await fetch(url, options);
-      const result = await response.text();
-      console.log(result);
+      const result = await response.json();
+      setWeatherData(result);
     } catch (error) {
       console.error(error);
     }
   };
 
     useEffect(() => {
-      fetchData();
+      fetchData('New York');
     }, []);
 
   return (
     <div>
       <Form onWeatherSearch={fetchData} />
-      <WeatherDisplay />
+      {weatherData && (
+        <WeatherDisplay
+      location={weatherData.location}
+      currentTemp={weatherData.current}
+       />
+      )}
+      
     </div>
   )
 }

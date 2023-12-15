@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function WeatherDisplay(props) {
+export default function WeatherDisplay({ location, currentTemp }) {
   const loaded = () => {
       return (
     <>
-      <h1>{props.name}</h1>
-      <h1>{props.temp_f}</h1>
+      <h1>{location.name}</h1>
+      <h1>{currentTemp.temp_f}</h1>
     </>
   )
   }
@@ -14,5 +14,5 @@ export default function WeatherDisplay(props) {
     return <h1>nothing here</h1>
   }
 
-  return props ? loaded() : loading();
+  return location && currentTemp ? loaded() : loading();
 }

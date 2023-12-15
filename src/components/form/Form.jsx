@@ -6,7 +6,7 @@ export default function Form(props) {
     const handleChange = (e) => {
         setFormData({
             ...formData,
-            [e.target.name] : e.target.name,
+            [e.target.name] : e.target.value,
         });
     }
 
