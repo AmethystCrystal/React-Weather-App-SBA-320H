@@ -21,6 +21,7 @@ export default function App() {
       const response = await fetch(url, options);
       const result = await response.json();
       setWeatherData(result);
+      console.log(result)
     } catch (error) {
       console.error(error);
     }
@@ -37,6 +38,8 @@ export default function App() {
         <WeatherDisplay
       location={weatherData.location}
       currentTemp={weatherData.current}
+      condition={weatherData.current}
+      image={weatherData.current}
        />
       )}
       
