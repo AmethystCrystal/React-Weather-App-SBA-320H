@@ -4,16 +4,17 @@ export default function WeatherDisplay({ location, currentTemp, condition, image
   const loaded = () => {
     return (
       <>
-        <h1>Location: {location.name}</h1>
-        <h1>Temperature: {currentTemp.temp_f} °F</h1>
-        <h1>Currently: {condition.condition.text}</h1>
-        <img src={image.condition.icon} alt="weather icon" />
+        <img src={image.condition.icon} alt="weather icon" width="30%"/>
+        <h1>{currentTemp.temp_f} °F</h1>
+        <h2>{location.name}</h2>
+        <h2>{condition.condition.text}</h2>
+        
       </>
     )
   }
 
   const loading = () => {
-    return <h1>nothing here</h1>
+    return <h1>Location doesn't exist</h1>
   }
 
   return location && currentTemp ? loaded() : loading();

@@ -28,6 +28,10 @@ export default function Form(props) {
                     name='searchTerm'
                     onChange={handleChange}
                     value={formData.searchTerm}
+                    placeholder='Enter location...'
+                    style={{
+                        borderRadius: '10px',
+                    }}
                 />
                 <input type='submit' value='Submit' />
             </form>
