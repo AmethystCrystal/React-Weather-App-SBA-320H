@@ -33,7 +33,9 @@ export default function Form(props) {
                         borderRadius: '10px',
                     }}
                 />
-                <input type='submit' value='Submit' />
+                <button style={{ background: 'transparent', border: 'none'}}>
+                    <img src="src\images\search.png" alt='Weather' width="90px" ></img>
+                </button>
             </form>
         </div>
     )

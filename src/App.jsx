@@ -30,8 +30,10 @@ export default function App() {
     fetchData('New York');
   }, []);
 
+  
   return (
-    <div>
+
+    <div >
       <Form onWeatherSearch={fetchData} />
       {weatherData && (
         <WeatherDisplay

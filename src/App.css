@@ -1,16 +1,13 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 11rem;
-  text-align: center;
-}
-
-body {
-    margin: 0;
-    padding: 0;
+  display: flex;
+    margin: 100px auto;
+    width: 450px ;
+    padding: 30px;
     background-color: rgb(11, 122, 233);
-    color: rgb(237, 241, 241);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    border-radius: 9px;
+    justify-content: center;
   }
 
