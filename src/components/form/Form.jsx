@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './form.css';
 
 export default function Form(props) {
     const [formData, setFormData] = useState({ searchTerm: "" })
