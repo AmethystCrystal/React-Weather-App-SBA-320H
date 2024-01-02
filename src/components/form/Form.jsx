@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './form.css';
 
 export default function Form(props) {
     const [formData, setFormData] = useState({ searchTerm: "" })
@@ -28,16 +29,17 @@ export default function Form(props) {
                     name='searchTerm'
                     onChange={handleChange}
                     value={formData.searchTerm}
-                    placeholder='Enter location...'
+                    placeholder='Enter location'
                     style={{
                         borderRadius: '10px',
                         border: 'white',
                         padding: '5px',
                         outline: 'none',
-                        width: '150px'
+                        width: '150px',
+                        marginRight: '30px',
                     }}
                 />
-                <button style={{ background: 'transparent', border: 'none', outline: 'none'}}>
+                <button style={{ background: 'transparent', border: 'none', outline: 'none', cursor: 'pointer'}}>
                     <img src="src\assests\search.png" alt='Weather' width="25px" ></img>
                 </button>
             </form>

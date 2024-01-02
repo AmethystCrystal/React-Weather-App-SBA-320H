@@ -8,7 +8,11 @@ export default function WeatherDisplay({ location, currentTemp, condition, image
         <img src={image.condition.icon} alt="weather icon" width="40%"/>
          {/* <h2>{condition.condition.text}</h2> */}
         <h1>{currentTemp.temp_f} °F</h1><br></br>
-        <p>{location.name}</p>  
+        <p 
+        style={{
+          
+        }}
+        >{location.name}</p>  
       </>
     )
   }
