@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './App.css'
+import './index.css'
 import WeatherDisplay from './components/weatherDisplay/WeatherDisplay'
 import Form from './components/form/Form'
 
@@ -33,8 +33,8 @@ export default function App() {
   
   return (
 
-    <div >
-      <Form onWeatherSearch={fetchData} />
+    <div className='app'>
+      <Form onWeatherSearch={fetchData} /><br></br>
       {weatherData && (
         <WeatherDisplay
           location={weatherData.location}

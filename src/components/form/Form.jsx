@@ -31,10 +31,14 @@ export default function Form(props) {
                     placeholder='Enter location...'
                     style={{
                         borderRadius: '10px',
+                        border: 'white',
+                        padding: '5px',
+                        outline: 'none',
+                        width: '150px'
                     }}
                 />
-                <button style={{ background: 'transparent', border: 'none'}}>
-                    <img src="src\images\search.png" alt='Weather' width="90px" ></img>
+                <button style={{ background: 'transparent', border: 'none', outline: 'none'}}>
+                    <img src="src\assests\search.png" alt='Weather' width="25px" ></img>
                 </button>
             </form>
         </div>
