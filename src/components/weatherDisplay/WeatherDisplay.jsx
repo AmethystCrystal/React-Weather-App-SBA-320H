@@ -6,9 +6,9 @@ export default function WeatherDisplay({ location, currentTemp, image }) {
     const iconUrl = `https:${image.condition.icon}`;
     return (
       <>
-        <img src={iconUrl} alt="weather icon" width="40%"/>
+        <img src={iconUrl} alt="weather icon" width="40%" />
         <h1>{currentTemp.temp_f} °F</h1><br></br>
-        <p>{location.name}</p>  
+        <p>{location.name}</p>
       </>
     )
   }
