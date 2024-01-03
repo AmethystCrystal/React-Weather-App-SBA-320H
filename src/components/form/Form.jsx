@@ -35,7 +35,8 @@ export default function Form(props) {
                         padding: '5px',
                         outline: 'none',
                         width: '150px',
-                        marginRight: '30px',
+                        marginRight: '20px',
+                        marginLeft: '-15px',
                     }}
                 />
                 <button style={{ background: 'transparent', border: 'none', outline: 'none', cursor: 'pointer'}}>
