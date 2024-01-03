@@ -13,7 +13,9 @@ export default function App() {
       method: 'GET',
       headers: {
         'X-RapidAPI-Key': apiKey,
-        'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+        'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com',
+        'Access-Control-Allow-Origin': '`https://astonishing-douhua-5f73d0.netlify.app/`',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
       },
     };
 
@@ -31,7 +33,7 @@ export default function App() {
     fetchData('New York');
   }, []);
 
-  
+
   return (
 
     <div className='app'>
