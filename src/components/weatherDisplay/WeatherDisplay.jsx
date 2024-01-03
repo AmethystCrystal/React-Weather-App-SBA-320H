@@ -1,14 +1,17 @@
 import React from 'react';
 import './weatherDisplay.css';
 
-export default function WeatherDisplay({ location, currentTemp, image }) {
+export default function WeatherDisplay({ location, currentTemp, condition, image }) {
   const loaded = () => {
-    const iconUrl = `https:${image.condition.icon}`;
     return (
       <>
-        <img src={iconUrl} alt="weather icon" width="40%" />
+        <img src={image.condition.icon} alt="weather icon" width="40%"/>
         <h1>{currentTemp.temp_f} °F</h1><br></br>
-        <p>{location.name}</p>
+        <p 
+        style={{
+          
+        }}
+        >{location.name}</p>  
       </>
     )
   }
