@@ -5,17 +5,23 @@
 }
 
 #root {
-  display: flex;
-  margin: 100px auto;
   width: 450px;
   padding: 30px;
-  padding-left: 100px;
+  padding-left: 170px;
   padding-right: 1px;
   background-color: rgb(11, 122, 233);
-  color: white;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: medium;
   border-radius: 10px;
-  justify-content: center;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: rgb(89, 85, 85);
+  color: white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: medium;
+
+}
