@@ -40,7 +40,7 @@ export default function Form(props) {
                     }}
                 />
                 <button style={{ background: 'transparent', border: 'none', outline: 'none', cursor: 'pointer'}}>
-                    <img src="/search.png" alt='Weather' width="25px" ></img>
+                    <img src="src\assets\search.png" alt='Weather' width="25px" ></img>
                 </button>
             </form>
         </div>
